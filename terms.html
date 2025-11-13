@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CK Adiithya Layout Residents Association</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="antialiased bg-gray-50 text-gray-800">
+
+<header class="bg-white shadow-sm">
+  <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center text-white font-bold">CK</div>
+      <div>
+        <a href="/" class="text-lg font-semibold">CK Adiithya Layout</a>
+        <div class="text-xs text-gray-500">Residents Association (CKALRA)</div>
+      </div>
+    </div>
+
+    <nav class="hidden md:flex items-center space-x-6 text-sm">
+      <a href="/" class="hover:text-green-700">Home</a>
+      <a href="/about.html" class="hover:text-green-700">About</a>
+      <a href="/membership.html" class="hover:text-green-700">Membership</a>
+      <a href="/contact.html" class="hover:text-green-700">Contact</a>
+      <a href="/terms.html" class="hover:text-green-700">Terms</a>
+    </nav>
+
+    <div class="md:hidden">
+      <button id="mobileBtn" class="p-2 rounded bg-gray-100" aria-label="Toggle menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+    <div class="px-4 py-3 flex flex-col space-y-2">
+      <a href="/" class="block">Home</a>
+      <a href="/about.html" class="block">About</a>
+      <a href="/membership.html" class="block">Membership</a>
+      <a href="/contact.html" class="block">Contact</a>
+      <a href="/terms.html" class="block">Terms</a>
+    </div>
+  </div>
+</header>
+<script>
+document.getElementById('mobileBtn')?.addEventListener('click', function(){ 
+  var m = document.getElementById('mobileMenu');
+  if(!m) return;
+  m.classList.toggle('hidden');
+});
+</script>
+
+<main class="container mx-auto px-4 py-8">
+  <section class="bg-white rounded-lg shadow p-6 max-w-4xl mx-auto">
+    <h2 class="text-xl font-semibold mb-3">Terms & Conditions</h2>
+    <p class="text-sm text-gray-700 mb-3">These terms outline the role and responsibilities of CK Adiithya Layout Residents Association (CKALRA) relating to representation, data collection and community services. They are a sample and should be reviewed by the Association committee or a legal advisor before publishing.</p>
+
+    <ol class="list-decimal list-inside text-gray-600 space-y-2">
+      <li>CKALRA represents registered members only. Membership details are maintained by the Association.</li>
+      <li>Association does not hold liability for private agreements between residents and vendors prior to formal handover.</li>
+      <li>All official meetings with the builder or its representatives will take place in presence of the Panchayat for transparency.</li>
+      <li>Personal data collected by the Association will be used solely for association activities and will not be shared without consent.</li>
+      <li>Financial records of the Association will be maintained and made available to members on request during committee meetings.</li>
+    </ol>
+
+    <p class="text-xs text-gray-500 mt-4">(This is sample wording — adapt it to match your registered bylaws and consult a lawyer if needed.)</p>
+  </section>
+</main>
+
+<footer class="bg-white border-t mt-8">
+  <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-600">
+    <div>© 2025 CK Adiithya Layout Residents Association. All rights reserved.</div>
+    <div class="mt-3 md:mt-0">
+      <a href="/terms.html" class="mr-4 hover:text-green-700">Terms</a>
+      <a href="mailto:ckadiithyalayout@gmail.com" class="hover:text-green-700">Contact</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
