@@ -1,1 +1,332 @@
-<html><body><h1>Membership Page</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Membership – CK Adiithya Layout Residents Association (CKALRA)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #222;
+    }
+    a { color: #6a1b9a; }
+    .page-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px 15px 40px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      margin: 6px 0;
+      font-size: 26px;
+    }
+    header h2 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: normal;
+      color: #555;
+    }
+    header p {
+      margin: 4px 0;
+      font-size: 13px;
+    }
+    .badge-line {
+      margin-top: 6px;
+      font-size: 12px;
+      color: #555;
+    }
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 18px 18px 20px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .section-title {
+      font-size: 18px;
+      margin-bottom: 10px;
+      border-left: 4px solid #6a1b9a;
+      padding-left: 8px;
+      color: #333;
+    }
+    .two-col {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+    .two-col > div {
+      flex: 1 1 310px;
+    }
+    ul {
+      padding-left: 18px;
+      margin: 6px 0 2px;
+      font-size: 14px;
+    }
+    .note {
+      font-size: 13px;
+      color: #555;
+      margin-top: 6px;
+    }
+    .bank-box {
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 10px 12px;
+      background: #fafafa;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .qr-wrapper {
+      text-align: center;
+    }
+    .qr-wrapper img {
+      max-width: 280px;
+      width: 90%;
+      height: auto;
+      border-radius: 12px;
+      margin: 10px 0;
+    }
+    .form-card label {
+      display: block;
+      margin: 8px 0 3px;
+      font-size: 14px;
+    }
+    .form-card input[type="text"],
+    .form-card input[type="number"],
+    .form-card input[type="date"],
+    .form-card textarea {
+      width: 100%;
+      padding: 7px 9px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    .inline-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .inline-row > div {
+      flex: 1 1 210px;
+    }
+    .modes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin: 5px 0 8px;
+      font-size: 14px;
+    }
+    .modes label {
+      display: flex;
+      align-items: center;
+    }
+    .modes input {
+      margin-right: 5px;
+    }
+    .btn-download {
+      display: inline-block;
+      margin: 4px 0 0;
+      padding: 8px 14px;
+      background: #6a1b9a;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    .btn-download:hover {
+      opacity: 0.9;
+    }
+    iframe, embed {
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #777;
+      margin-top: 20px;
+    }
+    @media (max-width: 700px) {
+      header h1 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-wrapper">
+
+  <!-- HEADER -->
+  <header>
+    <h1>CK Adiithya Layout Residents Association (CKALRA)</h1>
+    <h2>Membership Registration & Fee Details</h2>
+    <p>Email: <a href="mailto:ckadithyalayout@gmail.com">ckadithyalayout@gmail.com</a> |
+       Web: <a href="https://ckadiithya.com/" target="_blank">https://ckadiithya.com/</a> |
+       Mobile: +91-9686847093</p>
+    <p class="badge-line">
+      Registration No.: DRB3/SOR/495/2025-2026 |
+      Darpan ID: KA/2025/0888445 |
+      LIN: 2-3519-7167-8 |
+      ESIC No.: 50000883690001099
+    </p>
+  </header>
+
+  <!-- ABOUT MEMBERSHIP / NOTICE -->
+  <section class="card">
+    <div class="section-title">Why Become a Member?</div>
+    <p>
+      CK Adiithya Layout Residents Association (CKALRA) is a registered body of residents formed
+      under the Karnataka Societies Registration Act, 1960. Membership enables you to participate
+      in decisions of the layout, vote in association matters, receive official updates and be part
+      of welfare and development initiatives.
+    </p>
+    <ul>
+      <li>Official recognition as a member of CKALRA.</li>
+      <li>Right to participate and vote in General Body meetings and elections.</li>
+      <li>Access to certified communication, notices and meeting minutes.</li>
+      <li>Participation in committees (maintenance, culture, pets/street dogs, cleanliness, security etc.).</li>
+    </ul>
+    <p class="note">
+      After paying the membership fee, residents are requested to share payment acknowledgement
+      along with Name, Address, Mobile Number and Email ID to
+      <strong>ckadithyalayout@gmail.com</strong> and WhatsApp <strong>+91-9686847093</strong> for issuance
+      of the Official Membership Certificate.
+    </p>
+  </section>
+
+  <!-- TWO COLUMN: PAYMENT & QR -->
+  <section class="card two-col">
+    <!-- PAYMENT DETAILS / BANK -->
+    <div>
+      <div class="section-title">Membership Fee Payment Details</div>
+      <div class="form-card">
+        <label for="member-name">Member Name</label>
+        <input type="text" id="member-name" placeholder="Enter your full name">
+
+        <label for="property-id">Property / Site / Plot ID</label>
+        <input type="text" id="property-id" placeholder="Site No. / Khata No. / Property ID">
+
+        <div class="inline-row">
+          <div>
+            <label for="mobile">Mobile Number</label>
+            <input type="text" id="mobile" placeholder="10-digit mobile number">
+          </div>
+          <div>
+            <label for="email">Email ID</label>
+            <input type="text" id="email" placeholder="your@email.com">
+          </div>
+        </div>
+
+        <label for="amount">Membership Fee Amount (₹)</label>
+        <input type="number" id="amount" placeholder="₹">
+
+        <label>Mode of Payment:</label>
+        <div class="modes">
+          <label><input type="checkbox"> UPI</label>
+          <label><input type="checkbox"> Bank Transfer</label>
+          <label><input type="checkbox"> Cash</label>
+          <label><input type="checkbox"> Cheque</label>
+        </div>
+
+        <label for="cheque-no">If Cheque, Cheque No.</label>
+        <input type="text" id="cheque-no" placeholder="Cheque No. (if applicable)">
+
+        <label for="txn-ref">Transaction Reference / UPI ID</label>
+        <input type="text" id="txn-ref" placeholder="UPI Ref / UTR No. / UPI ID used">
+
+        <label for="pay-date">Date of Payment</label>
+        <input type="date" id="pay-date">
+
+        <p class="note">
+          Please fill the above details after payment and share them with the Association over
+          email / WhatsApp for verification and record.
+        </p>
+      </div>
+
+      <div class="section-title" style="margin-top:16px;">Association Bank Account Details</div>
+      <div class="bank-box">
+        <strong>Bank:</strong> Bank of Maharashtra<br>
+        <strong>Branch:</strong> Anekal<br>
+        <strong>Account Name:</strong> CK Adiithya Layout Residents Association (CKALRA)<br>
+        <strong>Account Number:</strong> 60556257560<br>
+        <strong>IFSC:</strong> MAHB0001690
+      </div>
+      <p class="note">
+        Residents may kindly remit the applicable membership fee to the above official
+        Association bank account. For NEFT / IMPS / Bank Transfer, please mention the
+        transaction reference number and date in the payment details.
+      </p>
+    </div>
+
+    <!-- QR / UPI -->
+    <div>
+      <div class="section-title">Pay via UPI / PhonePe</div>
+      <div class="qr-wrapper">
+        <!-- QR image you provided -->
+        <img src="/mnt/data/WhatsApp Image 2025-11-20 at 11.57.12.jpeg"
+             alt="PhonePe QR - CK Adiithya Layout Residents Association">
+        <p class="note">
+          Scan this QR code using PhonePe or any UPI app and pay to
+          <strong>CK Adiithya Layout Residents Association</strong>. Ensure the beneficiary
+          name matches before confirming the payment.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMBERSHIP FORM PDF -->
+  <section class="card">
+    <div class="section-title">Membership Application Form (PDF)</div>
+    <p>
+      Please download, fill and sign the official Membership Application Form and submit it
+      along with the payment details and required documents (ID proof & address proof).
+    </p>
+    <a class="btn-download" href="/mnt/data/membership form.pdf" target="_blank">
+      Download Membership Application Form (PDF)
+    </a>
+
+    <!-- Embedded preview of the PDF form -->
+    <embed src="/mnt/data/membership form.pdf"
+           type="application/pdf"
+           width="100%"
+           height="800px">
+  </section>
+
+  <!-- OPTIONAL DOWNLOADS: NOTICE & MEETING INVITE & BANK DETAILS -->
+  <section class="card">
+    <div class="section-title">Related Documents (PDF Downloads)</div>
+    <ul>
+      <li>
+        <a href="/mnt/data/membership form.pdf" target="_blank">
+          Membership Application Form – CKALRA
+        </a>
+      </li>
+      <li>
+        <a href="/mnt/data/meeting invitation.pdf" target="_blank">
+          Meeting Invitation – Introduction & Interaction Meeting
+        </a>
+      </li>
+      <li>
+        <a href="/mnt/data/membership fees.pdf" target="_blank">
+          Bank Account Details for Membership Fee & PhonePe QR
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    CK Adiithya Layout Residents Association (CKALRA) &copy; 2025 • Bengaluru – 562106
+  </footer>
+
+</div>
+
+</body>
+</html>
