@@ -1,3 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CK Adiithya Layout Residents Association</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="antialiased bg-gray-50 text-gray-800">
+
+<header class="bg-white shadow-sm">
+  <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center text-white font-bold">CK</div>
+      <div>
+        <a href="/" class="text-lg font-semibold">CK Adiithya Layout</a>
+        <div class="text-xs text-gray-500">Residents Association (CKALRA)</div>
+        <div class="text-xs text-gray-500">Reg : DRB3/SOR/495/2025-2026 </div>
+        <div class="text-xs text-gray-500">Darpan ID - KA/2025/0888445</div>
+      </div>
+    </div>
+
+    <nav class="hidden md:flex items-center space-x-6 text-sm">
+      <a href="/" class="hover:text-green-700">Home</a>
+      <a href="/about.html" class="hover:text-green-700">About Association</a>
+      <a href="/ckadiithya.html" class="hover:text-green-700">About CK Adiithya Layout</a>
+      <a href="/membership.html" class="hover:text-green-700">Membership</a>
+      <a href="/departments.html" class="hover:text-green-700">Departments</a>
+      <a href="/accounts.html" class="hover:text-green-700">Bank Accounts</a>
+      <a href="/youtube.html" class="hover:text-green-700">Youtube Channel</a>
+      <a href="/contact.html" class="hover:text-green-700">Contact</a>
+      <a href="/pets.html" class="hover:text-green-700">Pets Related Information</a>
+      <a href="/terms.html" class="hover:text-green-700">Terms</a>
+    </nav>
+
+    <div class="md:hidden">
+      <button id="mobileBtn" class="p-2 rounded bg-gray-100" aria-label="Toggle menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+    <div class="px-4 py-3 flex flex-col space-y-2">
+      <a href="/" class="block">Home</a>
+      <a href="/about.html" class="block">About Association</a>
+      <a href="/ckadiithya.html" class="block">About CK Adiithya Layout</a>
+      <a href="/membership.html" class="block">Membership</a>
+      <a href="/departments.html" class="block">Departments</a>
+      <a href="/accounts.html" class="block">Bank Accounts</a>
+      <a href="/youtube.html" class="block">Youtube</a>
+      <a href="/contact.html" class="block">Contact</a>
+      <a href="/pets.html" class="block">Pets Related Information</a>
+      <a href="/terms.html" class="block">Terms</a>
+    </div>
+  </div>
+</header>
+<script>
+document.getElementById('mobileBtn')?.addEventListener('click', function(){ 
+  var m = document.getElementById('mobileMenu');
+  if(!m) return;
+  m.classList.toggle('hidden');
+});
+</script>
+  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -195,7 +261,7 @@
           <td data-label="Bank Name">Bank of Maharashtra</td>
           <td data-label="Branch">Anekal</td>
           <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
-          <td data-label="Account Number">XXXXXXXXXXX1</td>
+          <td data-label="Account Number">60556257560</td>
           <td data-label="IFSC">MAHB0001690</td>
           <td data-label="Account Type">Current</td>
         </tr>
@@ -204,43 +270,43 @@
         <tr>
           <td data-label="#">2</td>
           <td data-label="Purpose" class="account-purpose">Corpus Fund Account</td>
-          <td data-label="Bank Name">Bank Name 2</td>
+          <td data-label="Bank Name">State Bank of India</td>
           <td data-label="Branch">Branch 2</td>
           <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
           <td data-label="Account Number">XXXXXXXXXXX2</td>
           <td data-label="IFSC">IFSCXXXXX2</td>
-          <td data-label="Account Type">Savings</td>
+          <td data-label="Account Type">Current</td>
         </tr>
 
         <!-- Account 3 -->
         <tr>
           <td data-label="#">3</td>
           <td data-label="Purpose" class="account-purpose">Sinking Fund Account</td>
-          <td data-label="Bank Name">Bank Name 3</td>
+          <td data-label="Bank Name">Union Bank of India</td>
           <td data-label="Branch">Branch 3</td>
           <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
           <td data-label="Account Number">XXXXXXXXXXX3</td>
           <td data-label="IFSC">IFSCXXXXX3</td>
-          <td data-label="Account Type">Savings</td>
+          <td data-label="Account Type">Current</td>
         </tr>
 
         <!-- Account 4 -->
         <tr>
           <td data-label="#">4</td>
           <td data-label="Purpose" class="account-purpose">Events & Cultural Fund</td>
-          <td data-label="Bank Name">Bank Name 4</td>
+          <td data-label="Bank Name">Bank of India</td>
           <td data-label="Branch">Branch 4</td>
           <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
           <td data-label="Account Number">XXXXXXXXXXX4</td>
           <td data-label="IFSC">IFSCXXXXX4</td>
-          <td data-label="Account Type">Savings</td>
+          <td data-label="Account Type">Current</td>
         </tr>
 
         <!-- Account 5 -->
         <tr>
           <td data-label="#">5</td>
           <td data-label="Purpose" class="account-purpose">Security & Housekeeping</td>
-          <td data-label="Bank Name">Bank Name 5</td>
+          <td data-label="Bank Name">Canara Bank</td>
           <td data-label="Branch">Branch 5</td>
           <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
           <td data-label="Account Number">XXXXXXXXXXX5</td>
@@ -252,43 +318,43 @@
         <tr>
           <td data-label="#">6</td>
           <td data-label="Purpose" class="account-purpose">Repairs & Maintenance Reserve</td>
-          <td data-label="Bank Name">Bank Name 6</td>
+          <td data-label="Bank Name">Bank of Baroda</td>
           <td data-label="Branch">Branch 6</td>
           <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
           <td data-label="Account Number">XXXXXXXXXXX6</td>
           <td data-label="IFSC">IFSCXXXXX6</td>
-          <td data-label="Account Type">Savings</td>
+          <td data-label="Account Type">Current</td>
         </tr>
 
         <!-- Account 7 -->
         <tr>
           <td data-label="#">7</td>
           <td data-label="Purpose" class="account-purpose">Legal & Compliance Fund</td>
-          <td data-label="Bank Name">Bank Name 7</td>
+          <td data-label="Bank Name">Indian Bank</td>
           <td data-label="Branch">Branch 7</td>
           <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
           <td data-label="Account Number">XXXXXXXXXXX7</td>
           <td data-label="IFSC">IFSCXXXXX7</td>
-          <td data-label="Account Type">Savings</td>
+          <td data-label="Account Type">Current</td>
         </tr>
 
         <!-- Account 8 -->
         <tr>
           <td data-label="#">8</td>
           <td data-label="Purpose" class="account-purpose">Development / Improvement Fund</td>
-          <td data-label="Bank Name">Bank Name 8</td>
+          <td data-label="Bank Name">Indian Overseas Bank</td>
           <td data-label="Branch">Branch 8</td>
           <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
           <td data-label="Account Number">XXXXXXXXXXX8</td>
           <td data-label="IFSC">IFSCXXXXX8</td>
-          <td data-label="Account Type">Savings</td>
+          <td data-label="Account Type">Current</td>
         </tr>
 
         <!-- Account 9 -->
         <tr>
           <td data-label="#">9</td>
           <td data-label="Purpose" class="account-purpose">Parking & Amenities Fund</td>
-          <td data-label="Bank Name">Bank Name 9</td>
+          <td data-label="Bank Name">IDBI Bank</td>
           <td data-label="Branch">Branch 9</td>
           <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
           <td data-label="Account Number">XXXXXXXXXXX9</td>
@@ -300,12 +366,12 @@
         <tr>
           <td data-label="#">10</td>
           <td data-label="Purpose" class="account-purpose">Emergency Fund Account</td>
-          <td data-label="Bank Name">Bank Name 10</td>
+          <td data-label="Bank Name">Punjab National Bank</td>
           <td data-label="Branch">Branch 10</td>
           <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
           <td data-label="Account Number">XXXXXXXXXXX10</td>
           <td data-label="IFSC">IFSCXXXXX10</td>
-          <td data-label="Account Type">Savings</td>
+          <td data-label="Account Type">Current</td>
         </tr>
       </tbody>
     </table>
