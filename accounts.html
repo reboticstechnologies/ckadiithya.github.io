@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bank Accounts - CK Adiithya Layout Residents Association</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      margin: 0;
+      background: #f5f7fb;
+      color: #222;
+    }
+    header {
+      background: #1f3c88;
+      color: #fff;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.4rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 16px;
+      font-size: 0.95rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 1100px;
+      margin: 20px auto 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      margin-bottom: 10px;
+    }
+    p.description {
+      margin-top: 0;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    thead {
+      background: #1f3c88;
+      color: #fff;
+    }
+    th, td {
+      padding: 10px 12px;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+    tbody tr:nth-child(even) {
+      background: #f0f3ff;
+    }
+    tbody tr:hover {
+      background: #e3e8ff;
+    }
+    .account-purpose {
+      font-weight: 600;
+    }
+    footer {
+      background: #1f3c88;
+      color: #fff;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 0.85rem;
+    }
+    .note {
+      font-size: 0.85rem;
+      margin-top: 10px;
+      color: #444;
+    }
+
+    /* QR / UPI sections */
+    .upi-section-wrapper {
+      margin-top: 30px;
+    }
+    .upi-section-title {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+    .upi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .upi-card {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 14px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .upi-card h4 {
+      margin: 0 0 6px 0;
+      font-size: 0.98rem;
+      color: #1f3c88;
+    }
+    .upi-card p {
+      margin: 2px 0;
+      font-size: 0.9rem;
+    }
+    .upi-label {
+      font-weight: 600;
+    }
+    .upi-qr {
+      margin-top: 8px;
+      text-align: center;
+    }
+    .upi-qr img {
+      max-width: 140px;
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+    }
+
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      thead {
+        display: none;
+      }
+      tr {
+        margin-bottom: 12px;
+        border-bottom: 1px solid #ddd;
+      }
+      td {
+        padding: 8px 10px;
+        position: relative;
+      }
+      td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        display: block;
+        margin-bottom: 4px;
+        color: #1f3c88;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CK Adiithya Layout Residents Association</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="accounts.html">Bank Accounts</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Association Bank Account Details</h2>
+    <p class="description">
+      Below are the bank account details of CK Adiithya Layout Residents
+      Association (CKALRA). Please ensure you transfer funds only to the
+      correct account based on the purpose (maintenance, corpus, events, etc.).
+    </p>
+
+    <!-- MAIN TABLE -->
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Purpose / Account Title</th>
+          <th>Bank Name</th>
+          <th>Branch</th>
+          <th>Account Name</th>
+          <th>Account Number</th>
+          <th>IFSC</th>
+          <th>Account Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Account 1 -->
+        <tr>
+          <td data-label="#">1</td>
+          <td data-label="Purpose" class="account-purpose">Maintenance Account</td>
+          <td data-label="Bank Name">Bank of Maharashtra</td>
+          <td data-label="Branch">Anekal</td>
+          <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
+          <td data-label="Account Number">XXXXXXXXXXX1</td>
+          <td data-label="IFSC">MAHB0001690</td>
+          <td data-label="Account Type">Current</td>
+        </tr>
+
+        <!-- Account 2 -->
+        <tr>
+          <td data-label="#">2</td>
+          <td data-label="Purpose" class="account-purpose">Corpus Fund Account</td>
+          <td data-label="Bank Name">Bank Name 2</td>
+          <td data-label="Branch">Branch 2</td>
+          <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
+          <td data-label="Account Number">XXXXXXXXXXX2</td>
+          <td data-label="IFSC">IFSCXXXXX2</td>
+          <td data-label="Account Type">Savings</td>
+        </tr>
+
+        <!-- Account 3 -->
+        <tr>
+          <td data-label="#">3</td>
+          <td data-label="Purpose" class="account-purpose">Sinking Fund Account</td>
+          <td data-label="Bank Name">Bank Name 3</td>
+          <td data-label="Branch">Branch 3</td>
+          <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
+          <td data-label="Account Number">XXXXXXXXXXX3</td>
+          <td data-label="IFSC">IFSCXXXXX3</td>
+          <td data-label="Account Type">Savings</td>
+        </tr>
+
+        <!-- Account 4 -->
+        <tr>
+          <td data-label="#">4</td>
+          <td data-label="Purpose" class="account-purpose">Events & Cultural Fund</td>
+          <td data-label="Bank Name">Bank Name 4</td>
+          <td data-label="Branch">Branch 4</td>
+          <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
+          <td data-label="Account Number">XXXXXXXXXXX4</td>
+          <td data-label="IFSC">IFSCXXXXX4</td>
+          <td data-label="Account Type">Savings</td>
+        </tr>
+
+        <!-- Account 5 -->
+        <tr>
+          <td data-label="#">5</td>
+          <td data-label="Purpose" class="account-purpose">Security & Housekeeping</td>
+          <td data-label="Bank Name">Bank Name 5</td>
+          <td data-label="Branch">Branch 5</td>
+          <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
+          <td data-label="Account Number">XXXXXXXXXXX5</td>
+          <td data-label="IFSC">IFSCXXXXX5</td>
+          <td data-label="Account Type">Current</td>
+        </tr>
+
+        <!-- Account 6 -->
+        <tr>
+          <td data-label="#">6</td>
+          <td data-label="Purpose" class="account-purpose">Repairs & Maintenance Reserve</td>
+          <td data-label="Bank Name">Bank Name 6</td>
+          <td data-label="Branch">Branch 6</td>
+          <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
+          <td data-label="Account Number">XXXXXXXXXXX6</td>
+          <td data-label="IFSC">IFSCXXXXX6</td>
+          <td data-label="Account Type">Savings</td>
+        </tr>
+
+        <!-- Account 7 -->
+        <tr>
+          <td data-label="#">7</td>
+          <td data-label="Purpose" class="account-purpose">Legal & Compliance Fund</td>
+          <td data-label="Bank Name">Bank Name 7</td>
+          <td data-label="Branch">Branch 7</td>
+          <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
+          <td data-label="Account Number">XXXXXXXXXXX7</td>
+          <td data-label="IFSC">IFSCXXXXX7</td>
+          <td data-label="Account Type">Savings</td>
+        </tr>
+
+        <!-- Account 8 -->
+        <tr>
+          <td data-label="#">8</td>
+          <td data-label="Purpose" class="account-purpose">Development / Improvement Fund</td>
+          <td data-label="Bank Name">Bank Name 8</td>
+          <td data-label="Branch">Branch 8</td>
+          <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
+          <td data-label="Account Number">XXXXXXXXXXX8</td>
+          <td data-label="IFSC">IFSCXXXXX8</td>
+          <td data-label="Account Type">Savings</td>
+        </tr>
+
+        <!-- Account 9 -->
+        <tr>
+          <td data-label="#">9</td>
+          <td data-label="Purpose" class="account-purpose">Parking & Amenities Fund</td>
+          <td data-label="Bank Name">Bank Name 9</td>
+          <td data-label="Branch">Branch 9</td>
+          <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
+          <td data-label="Account Number">XXXXXXXXXXX9</td>
+          <td data-label="IFSC">IFSCXXXXX9</td>
+          <td data-label="Account Type">Current</td>
+        </tr>
+
+        <!-- Account 10 -->
+        <tr>
+          <td data-label="#">10</td>
+          <td data-label="Purpose" class="account-purpose">Emergency Fund Account</td>
+          <td data-label="Bank Name">Bank Name 10</td>
+          <td data-label="Branch">Branch 10</td>
+          <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
+          <td data-label="Account Number">XXXXXXXXXXX10</td>
+          <td data-label="IFSC">IFSCXXXXX10</td>
+          <td data-label="Account Type">Savings</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="note">
+      <strong>Note:</strong> Please double-check the account number and IFSC code
+      before making any transfer. The association will not be responsible for
+      payments made to incorrect account numbers.
+    </p>
+
+    <!-- QR / UPI PAYMENT SECTIONS -->
+    <section class="upi-section-wrapper">
+      <h3 class="upi-section-title">QR / UPI Payment Options for Each Account</h3>
+      <p class="note">
+        You can also pay via UPI using the UPI ID or scanning the QR code for the
+        respective account.
+      </p>
+
+      <div class="upi-grid">
+        <!-- Account 1 UPI -->
+        <div class="upi-card">
+          <h4>1. Maintenance Account</h4>
+          <p><span class="upi-label">Bank:</span> Bank of Maharashtra, Anekal</p>
+          <p><span class="upi-label">UPI ID:</span> ckalra.maintenance@upi</p>
+          <div class="upi-qr">
+            <!-- Replace qr-account1.png with real QR image path -->
+            <img src="qr-account1.png" alt="Maintenance Account UPI QR">
+          </div>
+        </div>
+
+        <!-- Account 2 UPI -->
+        <div class="upi-card">
+          <h4>2. Corpus Fund Account</h4>
+          <p><span class="upi-label">Bank:</span> Bank Name 2, Branch 2</p>
+          <p><span class="upi-label">UPI ID:</span> ckalra.corpus@upi</p>
+          <div class="upi-qr">
+            <img src="qr-account2.png" alt="Corpus Fund UPI QR">
+          </div>
+        </div>
+
+        <!-- Account 3 UPI -->
+        <div class="upi-card">
+          <h4>3. Sinking Fund Account</h4>
+          <p><span class="upi-label">Bank:</span> Bank Name 3, Branch 3</p>
+          <p><span class="upi-label">UPI ID:</span> ckalra.sinking@upi</p>
+          <div class="upi-qr">
+            <img src="qr-account3.png" alt="Sinking Fund UPI QR">
+          </div>
+        </div>
+
+        <!-- Account 4 UPI -->
+        <div class="upi-card">
+          <h4>4. Events & Cultural Fund</h4>
+          <p><span class="upi-label">Bank:</span> Bank Name 4, Branch 4</p>
+          <p><span class="upi-label">UPI ID:</span> ckalra.events@upi</p>
+          <div class="upi-qr">
+            <img src="qr-account4.png" alt="Events & Cultural UPI QR">
+          </div>
+        </div>
+
+        <!-- Account 5 UPI -->
+        <div class="upi-card">
+          <h4>5. Security & Housekeeping</h4>
+          <p><span class="upi-label">Bank:</span> Bank Name 5, Branch 5</p>
+          <p><span class="upi-label">UPI ID:</span> ckalra.security@upi</p>
+          <div class="upi-qr">
+            <img src="qr-account5.png" alt="Security & Housekeeping UPI QR">
+          </div>
+        </div>
+
+        <!-- Account 6 UPI -->
+        <div class="upi-card">
+          <h4>6. Repairs & Maintenance Reserve</h4>
+          <p><span class="upi-label">Bank:</span> Bank Name 6, Branch 6</p>
+          <p><span class="upi-label">UPI ID:</span> ckalra.repairs@upi</p>
+          <div class="upi-qr">
+            <img src="qr-account6.png" alt="Repairs & Maintenance UPI QR">
+          </div>
+        </div>
+
+        <!-- Account 7 UPI -->
+        <div class="upi-card">
+          <h4>7. Legal & Compliance Fund</h4>
+          <p><span class="upi-label">Bank:</span> Bank Name 7, Branch 7</p>
+          <p><span class="upi-label">UPI ID:</span> ckalra.legal@upi</p>
+          <div class="upi-qr">
+            <img src="qr-account7.png" alt="Legal & Compliance UPI QR">
+          </div>
+        </div>
+
+        <!-- Account 8 UPI -->
+        <div class="upi-card">
+          <h4>8. Development / Improvement Fund</h4>
+          <p><span class="upi-label">Bank:</span> Bank Name 8, Branch 8</p>
+          <p><span class="upi-label">UPI ID:</span> ckalra.development@upi</p>
+          <div class="upi-qr">
+            <img src="qr-account8.png" alt="Development Fund UPI QR">
+          </div>
+        </div>
+
+        <!-- Account 9 UPI -->
+        <div class="upi-card">
+          <h4>9. Parking & Amenities Fund</h4>
+          <p><span class="upi-label">Bank:</span> Bank Name 9, Branch 9</p>
+          <p><span class="upi-label">UPI ID:</span> ckalra.parking@upi</p>
+          <div class="upi-qr">
+            <img src="qr-account9.png" alt="Parking & Amenities UPI QR">
+          </div>
+        </div>
+
+        <!-- Account 10 UPI -->
+        <div class="upi-card">
+          <h4>10. Emergency Fund Account</h4>
+          <p><span class="upi-label">Bank:</span> Bank Name 10, Branch 10</p>
+          <p><span class="upi-label">UPI ID:</span> ckalra.emergency@upi</p>
+          <div class="upi-qr">
+            <img src="qr-account10.png" alt="Emergency Fund UPI QR">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> CK Adiithya Layout Residents Association. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
