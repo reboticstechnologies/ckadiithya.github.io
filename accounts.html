@@ -1,11 +1,14 @@
-
-  
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Bank Accounts - CK Adiithya Layout Residents Association</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Styles -->
   <style>
     * {
       box-sizing: border-box;
@@ -15,27 +18,6 @@
       margin: 0;
       background: #f5f7fb;
       color: #222;
-    }
-    header {
-      background: #1f3c88;
-      color: #fff;
-      padding: 16px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 1.4rem;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 16px;
-      font-size: 0.95rem;
-    }
-    nav a:hover {
-      text-decoration: underline;
     }
     main {
       max-width: 1100px;
@@ -132,6 +114,7 @@
       border: 1px solid #ddd;
     }
 
+    /* Mobile table */
     @media (max-width: 768px) {
       table, thead, tbody, th, td, tr {
         display: block;
@@ -157,17 +140,9 @@
     }
   </style>
 </head>
-<body>
-  <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CK Adiithya Layout Residents Association</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
 <body class="antialiased bg-gray-50 text-gray-800">
 
+<!-- HEADER -->
 <header class="bg-white shadow-sm">
   <div class="container mx-auto px-4 py-4 flex items-center justify-between">
     <div class="flex items-center space-x-3">
@@ -175,7 +150,7 @@
       <div>
         <a href="/" class="text-lg font-semibold">CK Adiithya Layout</a>
         <div class="text-xs text-gray-500">Residents Association (CKALRA)</div>
-        <div class="text-xs text-gray-500">Reg : DRB3/SOR/495/2025-2026 </div>
+        <div class="text-xs text-gray-500">Reg : DRB3/SOR/495/2025-2026</div>
         <div class="text-xs text-gray-500">Darpan ID - KA/2025/0888445</div>
       </div>
     </div>
@@ -186,7 +161,7 @@
       <a href="/ckadiithya.html" class="hover:text-green-700">About CK Adiithya Layout</a>
       <a href="/membership.html" class="hover:text-green-700">Membership</a>
       <a href="/departments.html" class="hover:text-green-700">Departments</a>
-      <a href="/accounts.html" class="hover:text-green-700">Bank Accounts</a>
+      <a href="/accounts.html" class="hover:text-green-700 font-semibold">Bank Accounts</a>
       <a href="/youtube.html" class="hover:text-green-700">Youtube Channel</a>
       <a href="/contact.html" class="hover:text-green-700">Contact</a>
       <a href="/pets.html" class="hover:text-green-700">Pets Related Information</a>
@@ -195,20 +170,23 @@
 
     <div class="md:hidden">
       <button id="mobileBtn" class="p-2 rounded bg-gray-100" aria-label="Toggle menu">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
     </div>
   </div>
+
   <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-    <div class="px-4 py-3 flex flex-col space-y-2">
+    <div class="px-4 py-3 flex flex-col space-y-2 text-sm">
       <a href="/" class="block">Home</a>
       <a href="/about.html" class="block">About Association</a>
       <a href="/ckadiithya.html" class="block">About CK Adiithya Layout</a>
       <a href="/membership.html" class="block">Membership</a>
       <a href="/departments.html" class="block">Departments</a>
-      <a href="/accounts.html" class="block">Bank Accounts</a>
+      <a href="/accounts.html" class="block font-semibold">Bank Accounts</a>
       <a href="/youtube.html" class="block">Youtube</a>
       <a href="/contact.html" class="block">Contact</a>
       <a href="/pets.html" class="block">Pets Related Information</a>
@@ -217,276 +195,158 @@
   </div>
 </header>
 
-  <main>
-    <h2>Association Bank Account Details</h2>
-    <p class="description">
-      Below are the bank account details of CK Adiithya Layout Residents
-      Association (CKALRA). Please ensure you transfer funds only to the
-      correct account based on the purpose (maintenance, corpus, events, etc.).
-    </p>
+<!-- MAIN CONTENT -->
+<main>
+  <h2>Association Bank Account Details</h2>
+  <p class="description">
+    Below are the bank account details of CK Adiithya Layout Residents
+    Association (CKALRA). Please ensure you transfer funds only to the
+    correct account based on the purpose (maintenance, corpus, events, etc.).
+  </p>
 
-    <!-- MAIN TABLE -->
-    <table>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Purpose / Account Title</th>
-          <th>Bank Name</th>
-          <th>Branch</th>
-          <th>Account Name</th>
-          <th>Account Number</th>
-          <th>IFSC</th>
-          <th>Account Type</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Account 1 -->
-        <tr>
-          <td data-label="#">1</td>
-          <td data-label="Purpose" class="account-purpose">Maintenance Account No. 1</td>
-          <td data-label="Bank Name">Bank of Maharashtra</td>
-          <td data-label="Branch">Anekal</td>
-          <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
-          <td data-label="Account Number">60556257560</td>
-          <td data-label="IFSC">MAHB0001690</td>
-          <td data-label="Account Type">Current</td>
-        </tr>
+  <!-- MAIN TABLE -->
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Purpose / Account Title</th>
+        <th>Bank Name</th>
+        <th>Branch</th>
+        <th>Account Name</th>
+        <th>Account Number</th>
+        <th>IFSC</th>
+        <th>Account Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Account 1 -->
+      <tr>
+        <td data-label="#">1</td>
+        <td data-label="Purpose" class="account-purpose">Maintenance Account No. 1</td>
+        <td data-label="Bank Name">Bank of Maharashtra</td>
+        <td data-label="Branch">Anekal</td>
+        <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
+        <td data-label="Account Number">60556257560</td>
+        <td data-label="IFSC">MAHB0001690</td>
+        <td data-label="Account Type">Current</td>
+      </tr>
 
-        <!-- Account 2 -->
-        <tr>
-          <td data-label="#">2</td>
-          <td data-label="Purpose" class="account-purpose">Maintainance Account No. 2</td>
-          <td data-label="Bank Name">State Bank of India</td>
-          <td data-label="Branch">SBI INTOUCH BROOK FIELD BENGALURU</td>
-          <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
-          <td data-label="Account Number">44661092073</td>
-          <td data-label="IFSC">SBIN0019164</td>
-          <td data-label="Account Type">Current</td>
-        </tr>
+      <!-- Account 2 -->
+      <tr>
+        <td data-label="#">2</td>
+        <td data-label="Purpose" class="account-purpose">Maintenance Account No. 2</td>
+        <td data-label="Bank Name">State Bank of India</td>
+        <td data-label="Branch">SBI INTOUCH BROOK FIELD BENGALURU</td>
+        <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
+        <td data-label="Account Number">44661092073</td>
+        <td data-label="IFSC">SBIN0019164</td>
+        <td data-label="Account Type">Current</td>
+      </tr>
 
-        <!-- Account 3 -->
-        <tr>
-          <td data-label="#">3</td>
-          <td data-label="Purpose" class="account-purpose">Pooja & Religious Activities Account</td>
-          <td data-label="Bank Name">Union Bank of India</td>
-          <td data-label="Branch">Branch 3</td>
-          <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
-          <td data-label="Account Number">XXXXXXXXXXX3</td>
-          <td data-label="IFSC">IFSCXXXXX3</td>
-          <td data-label="Account Type">Current</td>
-        </tr>
+      <!-- Account 3 -->
+      <tr>
+        <td data-label="#">3</td>
+        <td data-label="Purpose" class="account-purpose">Pooja &amp; Religious Activities Account</td>
+        <td data-label="Bank Name">Union Bank of India</td>
+        <td data-label="Branch">Branch 3</td>
+        <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
+        <td data-label="Account Number">XXXXXXXXXXX3</td>
+        <td data-label="IFSC">IFSCXXXXX3</td>
+        <td data-label="Account Type">Current</td>
+      </tr>
 
-        <!-- Account 4 -->
-        <tr>
-          <td data-label="#">4</td>
-          <td data-label="Purpose" class="account-purpose">Events & Cultural Fund</td>
-          <td data-label="Bank Name">Bank of India</td>
-          <td data-label="Branch">Branch 4</td>
-          <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
-          <td data-label="Account Number">XXXXXXXXXXX4</td>
-          <td data-label="IFSC">IFSCXXXXX4</td>
-          <td data-label="Account Type">Current</td>
-        </tr>
+      <!-- Account 4 -->
+      <tr>
+        <td data-label="#">4</td>
+        <td data-label="Purpose" class="account-purpose">Events &amp; Cultural Fund</td>
+        <td data-label="Bank Name">Bank of India</td>
+        <td data-label="Branch">Branch 4</td>
+        <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
+        <td data-label="Account Number">XXXXXXXXXXX4</td>
+        <td data-label="IFSC">IFSCXXXXX4</td>
+        <td data-label="Account Type">Current</td>
+      </tr>
 
-        <!-- Account 5 -->
-        <tr>
-          <td data-label="#">5</td>
-          <td data-label="Purpose" class="account-purpose">Security & Housekeeping</td>
-          <td data-label="Bank Name">Canara Bank</td>
-          <td data-label="Branch">Branch 5</td>
-          <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
-          <td data-label="Account Number">XXXXXXXXXXX5</td>
-          <td data-label="IFSC">IFSCXXXXX5</td>
-          <td data-label="Account Type">Current</td>
-        </tr>
+      <!-- Account 5 -->
+      <tr>
+        <td data-label="#">5</td>
+        <td data-label="Purpose" class="account-purpose">Security &amp; Housekeeping</td>
+        <td data-label="Bank Name">Canara Bank</td>
+        <td data-label="Branch">Branch 5</td>
+        <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
+        <td data-label="Account Number">XXXXXXXXXXX5</td>
+        <td data-label="IFSC">IFSCXXXXX5</td>
+        <td data-label="Account Type">Current</td>
+      </tr>
 
-        <!-- Account 6 -->
-        <tr>
-          <td data-label="#">6</td>
-          <td data-label="Purpose" class="account-purpose">Repairs & Maintenance Reserve</td>
-          <td data-label="Bank Name">Bank of Baroda</td>
-          <td data-label="Branch">Branch 6</td>
-          <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
-          <td data-label="Account Number">XXXXXXXXXXX6</td>
-          <td data-label="IFSC">IFSCXXXXX6</td>
-          <td data-label="Account Type">Current</td>
-        </tr>
+      <!-- Account 6 -->
+      <tr>
+        <td data-label="#">6</td>
+        <td data-label="Purpose" class="account-purpose">Repairs &amp; Maintenance Reserve</td>
+        <td data-label="Bank Name">Bank of Baroda</td>
+        <td data-label="Branch">Branch 6</td>
+        <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
+        <td data-label="Account Number">XXXXXXXXXXX6</td>
+        <td data-label="IFSC">IFSCXXXXX6</td>
+        <td data-label="Account Type">Current</td>
+      </tr>
 
-        <!-- Account 7 -->
-        <tr>
-          <td data-label="#">7</td>
-          <td data-label="Purpose" class="account-purpose">Legal & Compliance Fund</td>
-          <td data-label="Bank Name">Indian Bank</td>
-          <td data-label="Branch">Branch 7</td>
-          <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
-          <td data-label="Account Number">XXXXXXXXXXX7</td>
-          <td data-label="IFSC">IFSCXXXXX7</td>
-          <td data-label="Account Type">Current</td>
-        </tr>
+      <!-- Account 7 -->
+      <tr>
+        <td data-label="#">7</td>
+        <td data-label="Purpose" class="account-purpose">Legal &amp; Compliance Fund</td>
+        <td data-label="Bank Name">Indian Bank</td>
+        <td data-label="Branch">Branch 7</td>
+        <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
+        <td data-label="Account Number">XXXXXXXXXXX7</td>
+        <td data-label="IFSC">IFSCXXXXX7</td>
+        <td data-label="Account Type">Current</td>
+      </tr>
 
-        <!-- Account 8 -->
-        <tr>
-          <td data-label="#">8</td>
-          <td data-label="Purpose" class="account-purpose">Development / Improvement Fund</td>
-          <td data-label="Bank Name">Indian Overseas Bank</td>
-          <td data-label="Branch">Branch 8</td>
-          <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
-          <td data-label="Account Number">XXXXXXXXXXX8</td>
-          <td data-label="IFSC">IFSCXXXXX8</td>
-          <td data-label="Account Type">Current</td>
-        </tr>
+      <!-- Account 8 -->
+      <tr>
+        <td data-label="#">8</td>
+        <td data-label="Purpose" class="account-purpose">Development / Improvement Fund</td>
+        <td data-label="Bank Name">Indian Overseas Bank</td>
+        <td data-label="Branch">Branch 8</td>
+        <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
+        <td data-label="Account Number">XXXXXXXXXXX8</td>
+        <td data-label="IFSC">IFSCXXXXX8</td>
+        <td data-label="Account Type">Current</td>
+      </tr>
 
-        <!-- Account 9 -->
-        <tr>
-          <td data-label="#">9</td>
-          <td data-label="Purpose" class="account-purpose">Parking & Amenities Fund</td>
-          <td data-label="Bank Name">IDBI Bank</td>
-          <td data-label="Branch">Branch 9</td>
-          <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
-          <td data-label="Account Number">XXXXXXXXXXX9</td>
-          <td data-label="IFSC">IFSCXXXXX9</td>
-          <td data-label="Account Type">Current</td>
-        </tr>
+      <!-- Account 9 -->
+      <tr>
+        <td data-label="#">9</td>
+        <td data-label="Purpose" class="account-purpose">Parking &amp; Amenities Fund</td>
+        <td data-label="Bank Name">IDBI Bank</td>
+        <td data-label="Branch">Branch 9</td>
+        <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
+        <td data-label="Account Number">XXXXXXXXXXX9</td>
+        <td data-label="IFSC">IFSCXXXXX9</td>
+        <td data-label="Account Type">Current</td>
+      </tr>
 
-        <!-- Account 10 -->
-        <tr>
-          <td data-label="#">10</td>
-          <td data-label="Purpose" class="account-purpose">Emergency Fund Account</td>
-          <td data-label="Bank Name">Central Bank of India</td>
-          <td data-label="Branch">Branch 10</td>
-          <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
-          <td data-label="Account Number">XXXXXXXXXXX10</td>
-          <td data-label="IFSC">IFSCXXXXX10</td>
-          <td data-label="Account Type">Current</td>
-        </tr>
-      </tbody>
-    </table>
+      <!-- Account 10 -->
+      <tr>
+        <td data-label="#">10</td>
+        <td data-label="Purpose" class="account-purpose">Emergency Fund Account</td>
+        <td data-label="Bank Name">Central Bank of India</td>
+        <td data-label="Branch">Branch 10</td>
+        <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
+        <td data-label="Account Number">XXXXXXXXXXX10</td>
+        <td data-label="IFSC">IFSCXXXXX10</td>
+        <td data-label="Account Type">Current</td>
+      </tr>
+    </tbody>
+  </table>
 
-    <p class="note">
-      <strong>Note:</strong> Please double-check the account number and IFSC code
-      before making any transfer. The association will not be responsible for
-      payments made to incorrect account numbers.
-    </p>
+  <p class="note">
+    <strong>Note:</strong> Please double-check the account number and IFSC code
+    before making any transfer. The association will not be responsible for
+    payments made to incorrect account numbers.
+  </p>
 
-    <!-- QR / UPI PAYMENT SECTIONS -->
-    <section class="upi-section-wrapper">
-      <h3 class="upi-section-title">QR / UPI Payment Options for Each Account</h3>
-      <p class="note">
-        You can also pay via UPI using the UPI ID or scanning the QR code for the
-        respective account.
-      </p>
-
-      <div class="upi-grid">
-        <!-- Account 1 UPI -->
-        <div class="upi-card">
-          <h4>1. Maintenance Account No. 1</h4>
-          <p><span class="upi-label">Bank:</span> Bank of Maharashtra, Anekal</p>
-          <p><span class="upi-label">UPI ID:</span> ckalra.2025@upi</p>
-          <div class="upi-qr">
-            <!-- Replace qr-account1.png with real QR image path -->
-            <img src="assets/QR1.jpeg" alt="Maintenance Account UPI QR">
-          </div>
-        </div>
-
-        <!-- Account 2 UPI -->
-        <div class="upi-card">
-          <h4>2. Maintenance Account No. 2</h4>
-          <p><span class="upi-label">Bank:</span> State Bank of India , SBI INTOUCH BROOK FIELD BENGALURU</p>
-          <p><span class="upi-label">UPI ID:</span> @upi</p>
-          <div class="upi-qr">
-            <img src="qr-account2.png" alt="Maintenance Account No. 2 UPI QR">
-          </div>
-        </div>
-
-        <!-- Account 3 UPI -->
-        <div class="upi-card">
-          <h4>3. Pooja & Religious Activities Account</h4>
-          <p><span class="upi-label">Bank:</span> Union Bank of India, Branch 3</p>
-          <p><span class="upi-label">UPI ID:</span> @upi</p>
-          <div class="upi-qr">
-            <img src="qr-account3.png" alt="Pooja & Religious Activities Account UPI QR">
-          </div>
-        </div>
-
-        <!-- Account 4 UPI -->
-        <div class="upi-card">
-          <h4>4. Events & Cultural Fund</h4>
-          <p><span class="upi-label">Bank:</span> Bank of India, Branch 4</p>
-          <p><span class="upi-label">UPI ID:</span> @upi</p>
-          <div class="upi-qr">
-            <img src="qr-account4.png" alt="Events & Cultural UPI QR">
-          </div>
-        </div>
-
-        <!-- Account 5 UPI -->
-        <div class="upi-card">
-          <h4>5. Security & Housekeeping</h4>
-          <p><span class="upi-label">Bank:</span> 	Canara Bank, Branch 5</p>
-          <p><span class="upi-label">UPI ID:</span> @upi</p>
-          <div class="upi-qr">
-            <img src="qr-account5.png" alt="Security & Housekeeping UPI QR">
-          </div>
-        </div>
-
-        <!-- Account 6 UPI -->
-        <div class="upi-card">
-          <h4>6. Repairs & Maintenance Reserve</h4>
-          <p><span class="upi-label">Bank:</span> Bank of Baroda, Branch 6</p>
-          <p><span class="upi-label">UPI ID:</span> @upi</p>
-          <div class="upi-qr">
-            <img src="qr-account6.png" alt="Repairs & Maintenance UPI QR">
-          </div>
-        </div>
-
-        <!-- Account 7 UPI -->
-        <div class="upi-card">
-          <h4>7. Legal & Compliance Fund</h4>
-          <p><span class="upi-label">Bank:</span> Indian Bank, Branch 7</p>
-          <p><span class="upi-label">UPI ID:</span> @upi</p>
-          <div class="upi-qr">
-            <img src="qr-account7.png" alt="Legal & Compliance UPI QR">
-          </div>
-        </div>
-
-        <!-- Account 8 UPI -->
-        <div class="upi-card">
-          <h4>8. Development / Improvement Fund</h4>
-          <p><span class="upi-label">Bank:</span> Indian Overseas Bank, Branch 8</p>
-          <p><span class="upi-label">UPI ID:</span> @upi</p>
-          <div class="upi-qr">
-            <img src="qr-account8.png" alt="Development Fund UPI QR">
-          </div>
-        </div>
-
-        <!-- Account 9 UPI -->
-        <div class="upi-card">
-          <h4>9. Parking & Amenities Fund</h4>
-          <p><span class="upi-label">Bank:</span> IDBI Bank, Branch 9</p>
-          <p><span class="upi-label">UPI ID:</span> @upi</p>
-          <div class="upi-qr">
-            <img src="qr-account9.png" alt="Parking & Amenities UPI QR">
-          </div>
-        </div>
-
-        <!-- Account 10 UPI -->
-        <div class="upi-card">
-          <h4>10. Emergency Fund Account</h4>
-          <p><span class="upi-label">Bank:</span> Central Bank of India, Branch 10</p>
-          <p><span class="upi-label">UPI ID:</span> @upi</p>
-          <div class="upi-qr">
-            <img src="qr-account10.png" alt="Emergency Fund UPI QR">
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    &copy; <span id="year"></span> CK Adiithya Layout Residents Association. All rights reserved.
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+  <!-- QR / UPI PAYMENT SECTIONS -->
+  <section class="upi-section-wrapper">
+    <h3 class="upi-section-title">QR / UPI Payment Options for Each Account<
