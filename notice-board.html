@@ -3,79 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CK Adiithya Layout Residents Association</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="antialiased bg-gray-50 text-gray-800">
-
-<header class="bg-white shadow-sm">
-  <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-    <div class="flex items-center space-x-3">
-      <div class="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center text-white font-bold">CK</div>
-      <div>
-        <a href="/" class="text-lg font-semibold">CK Adiithya Layout</a>
-        <div class="text-xs text-gray-500">Residents Association (CKALRA)</div>
-        <div class="text-xs text-gray-500">Reg : DRB3/SOR/495/2025-2026 </div>
-        <div class="text-xs text-gray-500">Darpan ID - KA/2025/0888445</div>
-      </div>
-    </div>
-
-    <nav class="hidden md:flex items-center space-x-6 text-sm">
-      <a href="/" class="hover:text-green-700">Home</a>
-      <a href="/about.html" class="hover:text-green-700">About</a>
-      <a href="/membership.html" class="hover:text-green-700">Membership</a>
-      <a href="/departments.html" class="hover:text-green-700">Departments</a>
-      <a href="/accounts.html" class="hover:text-green-700">Bank Account Details</a>
-      <a href="/notice-board.html" class="hover:text-green-700">Notice Board</a>
-      <a href="/youtube.html" class="hover:text-green-700">Youtube Channel</a>
-      <a href="/contact.html" class="hover:text-green-700">Contact</a>
-      <a href="/fed.html" class="hover:text-green-700">Federation Invitation</a>
-      <a href="/pets.html" class="hover:text-green-700">Pets Related Information</a>
-      <a href="/terms.html" class="hover:text-green-700">Terms</a>
-    </nav>
-
-    <div class="md:hidden">
-      <button id="mobileBtn" class="p-2 rounded bg-gray-100" aria-label="Toggle menu">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
-  </div>
-  <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-    <div class="px-4 py-3 flex flex-col space-y-2">
-      <a href="/" class="block">Home</a>
-      <a href="/about.html" class="block">About</a>
-      <a href="/membership.html" class="block">Membership</a>
-      <a href="/departments.html" class="block">Departments</a>
-      <a href="/accounts.html" class="block">Bank Account Details</a>
-      <a href="/notice-board.html" class="block">Notice Board</a>
-      <a href="/youtube.html" class="block">Youtube</a>
-      <a href="/contact.html" class="block">Contact</a>
-      <a href="/fed.html" class="block">Federation Invitation</a>
-      <a href="/pets.html" class="block">Pets Related Information</a>
-      <a href="/terms.html" class="block">Terms</a>
-    </div>
-  </div>
-<!doctype html>
-
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CK Adiithya Layout Residents Association - Notice Board</title>
-
-  <!-- Optional: Tailwind via CDN (remove if you don't want it) -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    /* Background pattern */
     body {
       background: radial-gradient(circle at top left, #e0f2fe, #f9fafb);
     }
 
-    /* Notice board look */
     .notice-board {
       background: #fef9c3;
       border: 4px solid #f97316;
@@ -84,7 +19,6 @@
       overflow: hidden;
     }
 
-    /* Pin / top strip */
     .pin-strip {
       position: absolute;
       top: 0;
@@ -100,32 +34,14 @@
       );
     }
 
-    /* "NEW" badge blinking */
     .new-badge {
       animation: blink 1s infinite;
     }
     @keyframes blink {
-      0%, 50% { opacity: 1; transform: scale(1); }
-      51%, 100% { opacity: 0.2; transform: scale(1.05); }
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0.2; }
     }
 
-    /* Glowing border animation for new information */
-    .glow {
-      animation: glowPulse 2.5s infinite;
-    }
-    @keyframes glowPulse {
-      0% {
-        box-shadow: 0 0 10px rgba(249, 115, 22, 0.5);
-      }
-      50% {
-        box-shadow: 0 0 25px rgba(234, 179, 8, 0.9);
-      }
-      100% {
-        box-shadow: 0 0 10px rgba(249, 115, 22, 0.5);
-      }
-    }
-
-    /* Small blinking dot for "New" */
     .blink-dot {
       width: 10px;
       height: 10px;
@@ -139,140 +55,128 @@
       51%, 100% { opacity: 0.2; }
     }
 
-    /* PDF iframe responsive container */
-    .pdf-wrapper {
-      position: relative;
-      padding-bottom: 70%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 0.75rem;
-      border: 2px dashed #f97316;
-      background: #fff;
+    .glow {
+      animation: glowPulse 2.5s infinite;
+    }
+    @keyframes glowPulse {
+      0% { box-shadow: 0 0 10px rgba(249, 115, 22, 0.5); }
+      50% { box-shadow: 0 0 25px rgba(234, 179, 8, 0.9); }
+      100% { box-shadow: 0 0 10px rgba(249, 115, 22, 0.5); }
     }
 
-    .pdf-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
+    .pdf-list a {
+      animation: glowPulse 2.5s infinite;
     }
   </style>
 </head>
 
 <body class="antialiased min-h-screen flex items-center justify-center p-4">
-  <main class="max-w-4xl w-full">
-    <!-- Page heading -->
-    <header class="mb-6 text-center">
-      <h1 class="text-3xl md:text-4xl font-extrabold text-slate-800 tracking-tight">
+  <main class="max-w-5xl w-full">
+
+    <header class="text-center mb-6">
+      <h1 class="text-3xl md:text-4xl font-extrabold text-slate-800">
         CK Adiithya Layout Residents Association
       </h1>
       <p class="text-sm md:text-base text-slate-600 mt-2">
-        Official Notice Board – Upcoming Meetings & Announcements Informations
+        Official Notice Board – Meetings, Announcements & Committees
       </p>
     </header>
 
-    <!-- Notice Board Card -->
-    <section
-      class="notice-board glow rounded-3xl p-6 md:p-8 mx-auto"
-      aria-label="Notice Board"
-    >
+    <!-- MAIN NOTICE CARD -->
+    <section class="notice-board glow rounded-3xl p-6 md:p-8 mx-auto mb-10">
+
       <div class="pin-strip"></div>
 
-      <!-- Header row inside card -->
       <div class="flex items-center justify-between mb-4 pt-2">
         <div class="flex items-center gap-2">
           <div class="blink-dot"></div>
-          <h2 class="text-2xl md:text-3xl font-bold text-slate-900">
-            Upcoming Association Activities
-          </h2>
+          <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Upcoming Association Meeting</h2>
         </div>
 
-        <span
-          class="new-badge inline-flex items-center rounded-full bg-red-600 px-3 py-1 text-xs md:text-sm font-semibold text-white uppercase tracking-widest shadow-lg"
-        >
-          ✨ New ✨
+        <span class="new-badge bg-red-600 text-white text-xs px-3 py-1 rounded-full">
+          NEW
         </span>
       </div>
 
-      <!-- Meeting details: EDIT THIS TEXT AS NEEDED -->
       <div class="grid md:grid-cols-2 gap-4 mb-4 text-slate-800">
         <div>
-          <p class="text-sm font-semibold uppercase tracking-wide text-slate-700">
-            Meeting Title
-          </p>
-          <p class="text-lg font-bold">
-            CKALRA Introduction Meeting
-          </p>
+          <p class="text-sm font-semibold text-slate-700 uppercase">Meeting Title</p>
+          <p class="text-lg font-bold">CKALRA Introduction Meeting</p>
         </div>
 
         <div>
-          <p class="text-sm font-semibold uppercase tracking-wide text-slate-700">
-            Date & Time
-          </p>
-          <p class="text-lg font-semibold">
-            Sunday, 30 November 2025 &bull; 16:00 PM
-          </p>
+          <p class="text-sm font-semibold text-slate-700 uppercase">Date & Time</p>
+          <p class="text-lg font-semibold">Sunday, 30 November 2025 • 04:00 PM</p>
         </div>
 
         <div>
-          <p class="text-sm font-semibold uppercase tracking-wide text-slate-700">
-            Venue
-          </p>
-          <p class="text-lg font-semibold">
-            Community Open Area, Club House (CK Adiithya Layout)
-          </p>
+          <p class="text-sm font-semibold text-slate-700 uppercase">Venue</p>
+          <p class="text-lg font-semibold">Community Open Area, Club House (CK Adiithya Layout)</p>
         </div>
 
         <div>
-          <p class="text-sm font-semibold uppercase tracking-wide text-slate-700">
-            Agenda Highlights
-          </p>
-          <ul class="list-disc list-inside text-sm md:text-base mt-1 space-y-1">
+          <p class="text-sm font-semibold text-slate-700 uppercase">Agenda Highlights</p>
+          <ul class="list-disc list-inside text-sm space-y-1">
             <li>Membership & Financial Update</li>
-            <li>Upcoming Development & Maintenance Plans</li>
-            <li>Formation of Committees & Resident Feedback</li>
+            <li>Development & Maintenance Plans</li>
+            <li>Committee Formation & Resident Feedback</li>
           </ul>
         </div>
       </div>
 
-      <!-- Info text -->
-      <p class="text-sm md:text-base text-slate-700 mb-4">
-        All residents are requested to kindly attend the meeting on time.
-        For any clarifications, please contact the Association office bearers.
+      <p class="text-sm text-slate-700 mb-4">
+        All residents are requested to attend. For clarifications, contact Association office bearers.
       </p>
 
-      <!-- PDF links / actions -->
-      <div
-        class="flex flex-wrap items-center gap-3 mb-6 text-sm md:text-base font-medium"
-      >
-        <a
-          href="assets/INVITE.pdf"
-          target="_blank"
-          class="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-4 py-2 text-white shadow-md hover:bg-emerald-700 transition"
-        >
+      <div class="mb-8">
+        <a href="assets/INVITE.pdf" target="_blank"
+          class="bg-green-600 text-white px-4 py-2 rounded-full shadow hover:bg-green-700">
           📄 View / Download Meeting Details (PDF)
         </a>
+      </div>
+    </section>
 
-        <span class="text-xs md:text-sm text-slate-700 italic">
-          (Contains detailed agenda and additional information.)
-        </span>
+    <!-- ANNOUNCEMENTS SECTION -->
+    <section class="bg-white rounded-3xl shadow p-6 md:p-8">
+      <h3 class="text-2xl md:text-3xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+        <span class="blink-dot"></span> Latest Announcements & Committee Formation PDFs
+        <span class="new-badge bg-red-600 text-white text-xs px-3 py-1 rounded-full">NEW</span>
+      </h3>
+
+      <div class="space-y-3 pdf-list">
+
+        <a href="assets/Sencit.pdf" target="_blank"
+           class="block bg-yellow-200 border-l-4 border-orange-600 px-4 py-2 rounded shadow">
+          📘 Senior Citizens & Welfare Committee – Call Letter (PDF)
+        </a>
+
+        <a href="assets/VolSec.pdf" target="_blank"
+           class="block bg-yellow-200 border-l-4 border-orange-600 px-4 py-2 rounded shadow">
+          🛡️ Security Guards Monthly Contribution Proposal – Voluntary (PDF)
+        </a>
+
+        <a href="assets/Bescom.pdf" target="_blank"
+           class="block bg-yellow-200 border-l-4 border-orange-600 px-4 py-2 rounded shadow">
+          ⚡ BESCOM Meter + BSNL + MyGate Digital Security Proposal (PDF)
+        </a>
+
+        <a href="assets/Pooja.pdf" target="_blank"
+           class="block bg-yellow-200 border-l-4 border-orange-600 px-4 py-2 rounded shadow">
+          🛕 Pooja & Temple Committee – Call Letter (PDF)
+        </a>
+
+        <a href="assets/Sport.pdf" target="_blank"
+           class="block bg-yellow-200 border-l-4 border-orange-600 px-4 py-2 rounded shadow">
+          🏅 Sports & Recreation Committee – Call Letter (PDF)
+        </a>
+
       </div>
 
-      <!-- Embedded PDF preview (optional; remove if not needed) -->
-      <div class="pdf-wrapper">
-        <iframe
-          src="assets/INVITE.pdf#toolbar=0&navpanes=0&scrollbar=1"
-          title="Meeting Details PDF Preview"
-        ></iframe>
-      </div>
-
-      <!-- Footer strip -->
-      <footer class="mt-4 text-xs md:text-sm text-right text-slate-700">
-        Last updated: <span class="font-semibold">[Update Date Here]</span>
+      <footer class="mt-6 text-xs text-right text-slate-600">
+        Last updated: <span class="font-semibold">23 Nov 2025</span>
       </footer>
     </section>
+
   </main>
 </body>
 </html>
