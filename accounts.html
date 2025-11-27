@@ -2,493 +2,322 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Bank Accounts - CK Adiithya Layout Residents Association</title>
+  <title>Association Bank Account Details - CKALRA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Tailwind CSS -->
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Custom Styles -->
-  <style>
-    * {
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-    body {
-      margin: 0;
-      background: #f5f7fb;
-      color: #222;
-    }
-    main {
-      max-width: 1100px;
-      margin: 20px auto 40px auto;
-      padding: 0 20px;
-    }
-    h2 {
-      margin-bottom: 10px;
-    }
-    p.description {
-      margin-top: 0;
-      margin-bottom: 20px;
-      line-height: 1.6;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: #fff;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    }
-    thead {
-      background: #1f3c88;
-      color: #fff;
-    }
-    th, td {
-      padding: 10px 12px;
-      text-align: left;
-      font-size: 0.9rem;
-    }
-    tbody tr:nth-child(even) {
-      background: #f0f3ff;
-    }
-    tbody tr:hover {
-      background: #e3e8ff;
-    }
-    .account-purpose {
-      font-weight: 600;
-    }
-    footer {
-      background: #1f3c88;
-      color: #fff;
-      text-align: center;
-      padding: 10px 20px;
-      font-size: 0.85rem;
-    }
-    .note {
-      font-size: 0.85rem;
-      margin-top: 10px;
-      color: #444;
-    }
-
-    /* QR / UPI sections */
-    .upi-section-wrapper {
-      margin-top: 30px;
-    }
-    .upi-section-title {
-      font-size: 1.1rem;
-      margin-bottom: 10px;
-    }
-    .upi-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-    }
-    .upi-card {
-      background: #ffffff;
-      border-radius: 8px;
-      padding: 14px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    }
-    .upi-card h4 {
-      margin: 0 0 6px 0;
-      font-size: 0.98rem;
-      color: #1f3c88;
-    }
-    .upi-card p {
-      margin: 2px 0;
-      font-size: 0.9rem;
-    }
-    .upi-label {
-      font-weight: 600;
-    }
-    .upi-qr {
-      margin-top: 8px;
-      text-align: center;
-    }
-    .upi-qr img {
-      max-width: 140px;
-      width: 100%;
-      height: auto;
-      border-radius: 6px;
-      border: 1px solid #ddd;
-    }
-
-    /* Mobile table */
-    @media (max-width: 768px) {
-      table, thead, tbody, th, td, tr {
-        display: block;
-      }
-      thead {
-        display: none;
-      }
-      tr {
-        margin-bottom: 12px;
-        border-bottom: 1px solid #ddd;
-      }
-      td {
-        padding: 8px 10px;
-        position: relative;
-      }
-      td::before {
-        content: attr(data-label);
-        font-weight: 600;
-        display: block;
-        margin-bottom: 4px;
-        color: #1f3c88;
-      }
-    }
-  </style>
 </head>
-<body class="antialiased bg-gray-50 text-gray-800">
-
-<!-- HEADER -->
-<header class="bg-white shadow-sm">
-  <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-    <div class="flex items-center space-x-3">
-      <div class="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center text-white font-bold">CK</div>
-      <div>
-        <a href="/" class="text-lg font-semibold">CK Adiithya Layout</a>
-        <div class="text-xs text-gray-500">Residents Association (CKALRA)</div>
-        <div class="text-xs text-gray-500">Reg : DRB3/SOR/495/2025-2026</div>
-        <div class="text-xs text-gray-500">Darpan ID - KA/2025/0888445</div>
+<body class="bg-slate-100 text-slate-900">
+  <div class="min-h-screen">
+    <!-- Header -->
+    <header class="bg-blue-900 text-white py-6 shadow-md">
+      <div class="max-w-6xl mx-auto px-4">
+        <h1 class="text-2xl md:text-3xl font-bold">
+          CK Adiithya Layout Residents Association (CKALRA)
+        </h1>
+        <p class="mt-1 text-sm md:text-base">
+          Association Bank Account Details &amp; UPI / QR Payment Options
+        </p>
       </div>
-    </div>
+    </header>
 
-    <nav class="hidden md:flex items-center space-x-6 text-sm">
-      <a href="/" class="hover:text-green-700">Home</a>
-      <a href="/about.html" class="hover:text-green-700">About Association</a>
-      <a href="/ckadiithya.html" class="hover:text-green-700">About CK Adiithya Layout</a>
-      <a href="/membership.html" class="hover:text-green-700">Membership</a>
-      <a href="/departments.html" class="hover:text-green-700">Departments</a>
-      <a href="/accounts.html" class="hover:text-green-700 font-semibold">Bank Accounts</a>
-      <a href="/youtube.html" class="hover:text-green-700">Youtube Channel</a>
-      <a href="/contact.html" class="hover:text-green-700">Contact</a>
-      <a href="/pets.html" class="hover:text-green-700">Pets Related Information</a>
-      <a href="/terms.html" class="hover:text-green-700">Terms</a>
-    </nav>
+    <main class="max-w-6xl mx-auto px-4 py-8 space-y-10">
+      <!-- Intro Note -->
+      <section class="bg-white rounded-xl shadow p-5 md:p-6">
+        <h2 class="text-xl font-semibold mb-3">Association Bank Account Details</h2>
+        <p class="text-sm md:text-base mb-3">
+          Below are the bank account details of
+          <strong>CK Adiithya Layout Residents Association (CKALRA)</strong>.
+          Please ensure you transfer funds only to the correct account based on the purpose
+          (maintenance, pooja, events, security, etc.).
+        </p>
+        <p class="text-xs md:text-sm text-red-700 font-semibold">
+          Note: Please double-check the <strong>account number</strong> and
+          <strong>IFSC code</strong> before making any transfer. The association will not be
+          responsible for payments made to incorrect account numbers.
+        </p>
+      </section>
 
-    <div class="md:hidden">
-      <button id="mobileBtn" class="p-2 rounded bg-gray-100" aria-label="Toggle menu">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
-             viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
+      <!-- Bank Accounts Table -->
+      <section class="bg-white rounded-xl shadow p-5 md:p-6 overflow-x-auto">
+        <h2 class="text-xl font-semibold mb-4">Bank Account List (5 Accounts)</h2>
+        <table class="min-w-full text-sm md:text-base border border-slate-200">
+          <thead class="bg-slate-100">
+            <tr>
+              <th class="border border-slate-200 px-2 py-2 text-left">#</th>
+              <th class="border border-slate-200 px-2 py-2 text-left">Purpose / Account Title</th>
+              <th class="border border-slate-200 px-2 py-2 text-left">Bank Name</th>
+              <th class="border border-slate-200 px-2 py-2 text-left">Branch</th>
+              <th class="border border-slate-200 px-2 py-2 text-left">Account Name</th>
+              <th class="border border-slate-200 px-2 py-2 text-left">Account Number</th>
+              <th class="border border-slate-200 px-2 py-2 text-left">IFSC</th>
+              <th class="border border-slate-200 px-2 py-2 text-left">Account Type</th>
+              <th class="border border-slate-200 px-2 py-2 text-left">Cheque Leaf (PDF)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 1 - Bank of Maharashtra -->
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 px-2 py-2">1</td>
+              <td class="border border-slate-200 px-2 py-2">Maintenance Account No. 1</td>
+              <td class="border border-slate-200 px-2 py-2">Bank of Maharashtra</td>
+              <td class="border border-slate-200 px-2 py-2">Anekal</td>
+              <td class="border border-slate-200 px-2 py-2">
+                CK Adiithya Layout Residents Association
+              </td>
+              <td class="border border-slate-200 px-2 py-2">60556257560</td>
+              <td class="border border-slate-200 px-2 py-2">MAHB0001690</td>
+              <td class="border border-slate-200 px-2 py-2">Current</td>
+              <td class="border border-slate-200 px-2 py-2">
+                <!-- Replace # with actual PDF URL -->
+                <a href="#" class="text-blue-700 underline text-xs md:text-sm">
+                  View Cheque Leaf
+                </a>
+              </td>
+            </tr>
+            <!-- 2 - State Bank of India -->
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 px-2 py-2">2</td>
+              <td class="border border-slate-200 px-2 py-2">Maintenance Account No. 2</td>
+              <td class="border border-slate-200 px-2 py-2">State Bank of India</td>
+              <td class="border border-slate-200 px-2 py-2">SBI INTOUCH BROOK FIELD BENGALURU</td>
+              <td class="border border-slate-200 px-2 py-2">
+                CK Adiithya Layout Residents Association
+              </td>
+              <td class="border border-slate-200 px-2 py-2">44661092073</td>
+              <td class="border border-slate-200 px-2 py-2">SBIN0019164</td>
+              <td class="border border-slate-200 px-2 py-2">Current</td>
+              <td class="border border-slate-200 px-2 py-2">
+                <!-- Replace # with actual PDF URL -->
+                <a href="#" class="text-blue-700 underline text-xs md:text-sm">
+                  View Cheque Leaf
+                </a>
+              </td>
+            </tr>
+            <!-- 3 - Union Bank of India -->
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 px-2 py-2">3</td>
+              <td class="border border-slate-200 px-2 py-2">Pooja &amp; Religious Activities</td>
+              <td class="border border-slate-200 px-2 py-2">Union Bank of India</td>
+              <td class="border border-slate-200 px-2 py-2">Branch 3</td>
+              <td class="border border-slate-200 px-2 py-2">
+                CK Adiithya Layout Residents Association
+              </td>
+              <td class="border border-slate-200 px-2 py-2">XXXXXXXXXXX3</td>
+              <td class="border border-slate-200 px-2 py-2">IFSCXXXXX3</td>
+              <td class="border border-slate-200 px-2 py-2">Current</td>
+              <td class="border border-slate-200 px-2 py-2">
+                <!-- Replace # with actual PDF URL -->
+                <a href="#" class="text-blue-700 underline text-xs md:text-sm">
+                  View Cheque Leaf
+                </a>
+              </td>
+            </tr>
+            <!-- 4 - Bank of India -->
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 px-2 py-2">4</td>
+              <td class="border border-slate-200 px-2 py-2">Events &amp; Cultural Fund</td>
+              <td class="border border-slate-200 px-2 py-2">Bank of India</td>
+              <td class="border border-slate-200 px-2 py-2">Branch 4</td>
+              <td class="border border-slate-200 px-2 py-2">
+                CK Adiithya Layout Residents Association
+              </td>
+              <td class="border border-slate-200 px-2 py-2">XXXXXXXXXXX4</td>
+              <td class="border border-slate-200 px-2 py-2">IFSCXXXXX4</td>
+              <td class="border border-slate-200 px-2 py-2">Current</td>
+              <td class="border border-slate-200 px-2 py-2">
+                <!-- Replace # with actual PDF URL -->
+                <a href="#" class="text-blue-700 underline text-xs md:text-sm">
+                  View Cheque Leaf
+                </a>
+              </td>
+            </tr>
+            <!-- 5 - Canara Bank -->
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 px-2 py-2">5</td>
+              <td class="border border-slate-200 px-2 py-2">Security &amp; Housekeeping</td>
+              <td class="border border-slate-200 px-2 py-2">Canara Bank</td>
+              <td class="border border-slate-200 px-2 py-2">Branch 5</td>
+              <td class="border border-slate-200 px-2 py-2">
+                CK Adiithya Layout Residents Association
+              </td>
+              <td class="border border-slate-200 px-2 py-2">XXXXXXXXXXX5</td>
+              <td class="border border-slate-200 px-2 py-2">IFSCXXXXX5</td>
+              <td class="border border-slate-200 px-2 py-2">Current</td>
+              <td class="border border-slate-200 px-2 py-2">
+                <!-- Replace # with actual PDF URL -->
+                <a href="#" class="text-blue-700 underline text-xs md:text-sm">
+                  View Cheque Leaf
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- UPI / QR section -->
+      <section class="bg-white rounded-xl shadow p-5 md:p-6">
+        <h2 class="text-xl font-semibold mb-4">QR / UPI Payment Options</h2>
+        <p class="text-sm md:text-base mb-4">
+          You may scan the respective <strong>QR code</strong> or use the mentioned
+          <strong>UPI ID</strong> to make hassle-free online payments to the selected account.
+        </p>
+
+        <div class="grid gap-4 md:grid-cols-2">
+          <!-- Card 1 -->
+          <div class="border border-slate-200 rounded-lg p-4 flex flex-col gap-3">
+            <h3 class="font-semibold text-lg">Maintenance Account No. 1</h3>
+            <p class="text-sm">
+              <span class="font-medium">Bank:</span> Bank of Maharashtra (Anekal)
+            </p>
+            <p class="text-sm">
+              <span class="font-medium">UPI ID:</span>
+              <span class="font-mono">ckalra.2025@ybl</span>
+            </p>
+            <div class="mt-2">
+              <p class="text-xs text-slate-600 mb-1">QR code for Maintenance Account No. 1</p>
+              <!-- Replace src with actual QR image path -->
+              <div class="w-32 h-32 bg-slate-100 border border-dashed border-slate-300 flex items-center justify-center text-xs text-slate-500">
+                QR Image Here
+              </div>
+            </div>
+            <div class="mt-3">
+              <!-- Replace # with actual cheque PDF path -->
+              <a href="#" class="inline-block text-xs md:text-sm text-blue-700 underline">
+                View Cheque Leaf (PDF)
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="border border-slate-200 rounded-lg p-4 flex flex-col gap-3">
+            <h3 class="font-semibold text-lg">Maintenance Account No. 2</h3>
+            <p class="text-sm">
+              <span class="font-medium">Bank:</span> State Bank of India
+              (SBI INTOUCH BROOK FIELD BENGALURU)
+            </p>
+            <p class="text-sm">
+              <span class="font-medium">UPI ID:</span>
+              <span class="font-mono">9584393846@sbi</span>
+            </p>
+            <div class="mt-2">
+              <p class="text-xs text-slate-600 mb-1">QR code for Maintenance Account No. 2</p>
+              <!-- Replace src with actual QR image path -->
+              <div class="w-32 h-32 bg-slate-100 border border-dashed border-slate-300 flex items-center justify-center text-xs text-slate-500">
+                QR Image Here
+              </div>
+            </div>
+            <div class="mt-3">
+              <!-- Replace # with actual cheque PDF path -->
+              <a href="#" class="inline-block text-xs md:text-sm text-blue-700 underline">
+                View Cheque Leaf (PDF)
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="border border-slate-200 rounded-lg p-4 flex flex-col gap-3">
+            <h3 class="font-semibold text-lg">Pooja &amp; Religious Activities Account</h3>
+            <p class="text-sm">
+              <span class="font-medium">Bank:</span> Union Bank of India
+            </p>
+            <p class="text-sm">
+              <span class="font-medium">UPI ID:</span>
+              <span class="font-mono">your-upi-id-3@bank</span>
+            </p>
+            <div class="mt-2">
+              <p class="text-xs text-slate-600 mb-1">
+                QR code for Pooja &amp; Religious Activities Account
+              </p>
+              <!-- Replace src with actual QR image path -->
+              <div class="w-32 h-32 bg-slate-100 border border-dashed border-slate-300 flex items-center justify-center text-xs text-slate-500">
+                QR Image Here
+              </div>
+            </div>
+            <div class="mt-3">
+              <!-- Replace # with actual cheque PDF path -->
+              <a href="#" class="inline-block text-xs md:text-sm text-blue-700 underline">
+                View Cheque Leaf (PDF)
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="border border-slate-200 rounded-lg p-4 flex flex-col gap-3">
+            <h3 class="font-semibold text-lg">Events &amp; Cultural Fund</h3>
+            <p class="text-sm">
+              <span class="font-medium">Bank:</span> Bank of India
+            </p>
+            <p class="text-sm">
+              <span class="font-medium">UPI ID:</span>
+              <span class="font-mono">your-upi-id-4@bank</span>
+            </p>
+            <div class="mt-2">
+              <p class="text-xs text-slate-600 mb-1">
+                QR code for Events &amp; Cultural Fund
+              </p>
+              <!-- Replace src with actual QR image path -->
+              <div class="w-32 h-32 bg-slate-100 border border-dashed border-slate-300 flex items-center justify-center text-xs text-slate-500">
+                QR Image Here
+              </div>
+            </div>
+            <div class="mt-3">
+              <!-- Replace # with actual cheque PDF path -->
+              <a href="#" class="inline-block text-xs md:text-sm text-blue-700 underline">
+                View Cheque Leaf (PDF)
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="border border-slate-200 rounded-lg p-4 flex flex-col gap-3">
+            <h3 class="font-semibold text-lg">Security &amp; Housekeeping</h3>
+            <p class="text-sm">
+              <span class="font-medium">Bank:</span> Canara Bank
+            </p>
+            <p class="text-sm">
+              <span class="font-medium">UPI ID:</span>
+              <span class="font-mono">your-upi-id-5@bank</span>
+            </p>
+            <div class="mt-2">
+              <p class="text-xs text-slate-600 mb-1">
+                QR code for Security &amp; Housekeeping
+              </p>
+              <!-- Replace src with actual QR image path -->
+              <div class="w-32 h-32 bg-slate-100 border border-dashed border-slate-300 flex items-center justify-center text-xs text-slate-500">
+                QR Image Here
+              </div>
+            </div>
+            <div class="mt-3">
+              <!-- Replace # with actual cheque PDF path -->
+              <a href="#" class="inline-block text-xs md:text-sm text-blue-700 underline">
+                View Cheque Leaf (PDF)
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Optional: Generic Cheque Leaf Note -->
+      <section class="bg-white rounded-xl shadow p-5 md:p-6">
+        <h2 class="text-lg font-semibold mb-2">Cheque Leaf PDFs</h2>
+        <p class="text-sm md:text-base">
+          For verification and record purposes, cheque leaf PDFs for each bank account can be
+          uploaded and linked above. Please contact the association office if you need copies of
+          cheque leaves for any specific account.
+        </p>
+      </section>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-200 text-center text-xs md:text-sm py-3 mt-6">
+      &copy; <span id="year"></span> CK Adiithya Layout Residents Association (CKALRA). All rights reserved.
+    </footer>
   </div>
 
-  <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-    <div class="px-4 py-3 flex flex-col space-y-2 text-sm">
-      <a href="/" class="block">Home</a>
-      <a href="/about.html" class="block">About Association</a>
-      <a href="/ckadiithya.html" class="block">About CK Adiithya Layout</a>
-      <a href="/membership.html" class="block">Membership</a>
-      <a href="/departments.html" class="block">Departments</a>
-      <a href="/accounts.html" class="block font-semibold">Bank Accounts</a>
-      <a href="/youtube.html" class="block">Youtube</a>
-      <a href="/contact.html" class="block">Contact</a>
-      <a href="/pets.html" class="block">Pets Related Information</a>
-      <a href="/terms.html" class="block">Terms</a>
-    </div>
-  </div>
-</header>
-
-<!-- MAIN CONTENT -->
-<main>
-  <h2>Association Bank Account Details</h2>
-  <p class="description">
-    Below are the bank account details of CK Adiithya Layout Residents
-    Association (CKALRA). Please ensure you transfer funds only to the
-    correct account based on the purpose (maintenance, corpus, events, etc.).
-  </p>
-
-  <!-- MAIN TABLE -->
-  <table>
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Purpose / Account Title</th>
-        <th>Bank Name</th>
-        <th>Branch</th>
-        <th>Account Name</th>
-        <th>Account Number</th>
-        <th>IFSC</th>
-        <th>Account Type</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Account 1 -->
-      <tr>
-        <td data-label="#">1</td>
-        <td data-label="Purpose" class="account-purpose">Maintenance Account No. 1</td>
-        <td data-label="Bank Name">Bank of Maharashtra</td>
-        <td data-label="Branch">Anekal</td>
-        <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
-        <td data-label="Account Number">60556257560</td>
-        <td data-label="IFSC">MAHB0001690</td>
-        <td data-label="Account Type">Current</td>
-      </tr>
-
-      <!-- Account 2 -->
-      <tr>
-        <td data-label="#">2</td>
-        <td data-label="Purpose" class="account-purpose">Maintenance Account No. 2</td>
-        <td data-label="Bank Name">State Bank of India</td>
-        <td data-label="Branch">SBI INTOUCH BROOK FIELD BENGALURU</td>
-        <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
-        <td data-label="Account Number">44661092073</td>
-        <td data-label="IFSC">SBIN0019164</td>
-        <td data-label="Account Type">Current</td>
-      </tr>
-
-      <!-- Account 3 -->
-      <tr>
-        <td data-label="#">3</td>
-        <td data-label="Purpose" class="account-purpose">Pooja &amp; Religious Activities Account</td>
-        <td data-label="Bank Name">Union Bank of India</td>
-        <td data-label="Branch">Branch 3</td>
-        <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
-        <td data-label="Account Number">XXXXXXXXXXX3</td>
-        <td data-label="IFSC">IFSCXXXXX3</td>
-        <td data-label="Account Type">Current</td>
-      </tr>
-
-      <!-- Account 4 -->
-      <tr>
-        <td data-label="#">4</td>
-        <td data-label="Purpose" class="account-purpose">Events &amp; Cultural Fund</td>
-        <td data-label="Bank Name">Bank of India</td>
-        <td data-label="Branch">Branch 4</td>
-        <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
-        <td data-label="Account Number">XXXXXXXXXXX4</td>
-        <td data-label="IFSC">IFSCXXXXX4</td>
-        <td data-label="Account Type">Current</td>
-      </tr>
-
-      <!-- Account 5 -->
-      <tr>
-        <td data-label="#">5</td>
-        <td data-label="Purpose" class="account-purpose">Security &amp; Housekeeping</td>
-        <td data-label="Bank Name">Canara Bank</td>
-        <td data-label="Branch">Branch 5</td>
-        <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
-        <td data-label="Account Number">XXXXXXXXXXX5</td>
-        <td data-label="IFSC">IFSCXXXXX5</td>
-        <td data-label="Account Type">Current</td>
-      </tr>
-
-      <!-- Account 6 -->
-      <tr>
-        <td data-label="#">6</td>
-        <td data-label="Purpose" class="account-purpose">Repairs &amp; Maintenance Reserve</td>
-        <td data-label="Bank Name">Bank of Baroda</td>
-        <td data-label="Branch">Branch 6</td>
-        <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
-        <td data-label="Account Number">XXXXXXXXXXX6</td>
-        <td data-label="IFSC">IFSCXXXXX6</td>
-        <td data-label="Account Type">Current</td>
-      </tr>
-
-      <!-- Account 7 -->
-      <tr>
-        <td data-label="#">7</td>
-        <td data-label="Purpose" class="account-purpose">Legal &amp; Compliance Fund</td>
-        <td data-label="Bank Name">Indian Bank</td>
-        <td data-label="Branch">Branch 7</td>
-        <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
-        <td data-label="Account Number">XXXXXXXXXXX7</td>
-        <td data-label="IFSC">IFSCXXXXX7</td>
-        <td data-label="Account Type">Current</td>
-      </tr>
-
-      <!-- Account 8 -->
-      <tr>
-        <td data-label="#">8</td>
-        <td data-label="Purpose" class="account-purpose">Development / Improvement Fund</td>
-        <td data-label="Bank Name">Indian Overseas Bank</td>
-        <td data-label="Branch">Branch 8</td>
-        <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
-        <td data-label="Account Number">XXXXXXXXXXX8</td>
-        <td data-label="IFSC">IFSCXXXXX8</td>
-        <td data-label="Account Type">Current</td>
-      </tr>
-
-      <!-- Account 9 -->
-      <tr>
-        <td data-label="#">9</td>
-        <td data-label="Purpose" class="account-purpose">Parking &amp; Amenities Fund</td>
-        <td data-label="Bank Name">IDBI Bank</td>
-        <td data-label="Branch">Branch 9</td>
-        <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
-        <td data-label="Account Number">XXXXXXXXXXX9</td>
-        <td data-label="IFSC">IFSCXXXXX9</td>
-        <td data-label="Account Type">Current</td>
-      </tr>
-
-      <!-- Account 10 -->
-      <tr>
-        <td data-label="#">10</td>
-        <td data-label="Purpose" class="account-purpose">Emergency Fund Account</td>
-        <td data-label="Bank Name">Central Bank of India</td>
-        <td data-label="Branch">Branch 10</td>
-        <td data-label="Account Name">CK Adiithya Layout Residents Association</td>
-        <td data-label="Account Number">XXXXXXXXXXX10</td>
-        <td data-label="IFSC">IFSCXXXXX10</td>
-        <td data-label="Account Type">Current</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <p class="note">
-    <strong>Note:</strong> Please double-check the account number and IFSC code
-    before making any transfer. The association will not be responsible for
-    payments made to incorrect account numbers.
-  </p>
-
-  <!-- QR / UPI PAYMENT SECTIONS -->
-  <section class="upi-section-wrapper">
-    <h3 class="upi-section-title">QR / UPI Payment Options for Each Account</h3>
-    <p class="note">
-      You may scan the respective QR code or use the mentioned UPI ID (if provided)
-      to make hassle-free online payments to the selected account.
-    </p>
-
-    <div class="upi-grid">
-      <!-- UPI / QR for Account 1 -->
-      <div class="upi-card">
-        <h4>Maintenance Account No. 1</h4>
-        <p><span class="upi-label">Bank:</span> Bank of Maharashtra (Anekal)</p>
-        <p><span class="upi-label">UPI ID:</span> <em>ckalra.2025@ybl</em></p>
-        <div class="upi-qr">
-          <img src="assets/QR1.jpeg" alt="QR code for Maintenance Account No. 1" />
-          <p style="font-size:0.8rem;margin-top:4px;"></p>
-        </div>
-      </div>
-
-      <!-- UPI / QR for Account 2 -->
-      <div class="upi-card">
-        <h4>Maintenance Account No. 2</h4>
-        <p><span class="upi-label">Bank:</span> State Bank of India (SBI INTOUCH BROOK FIELD BENGALURU)</p>
-        <p><span class="upi-label">UPI ID:</span> <em>9584393846@sbi</em></p>
-        <div class="upi-qr">
-          <img src="assets/ckalrasbiqr.jpg" alt="QR code for Maintenance Account No. 2" />
-          <p style="font-size:0.8rem;margin-top:4px;"></p>
-        </div>
-      </div>
-
-      <!-- UPI / QR for Account 3 -->
-      <div class="upi-card">
-        <h4>Pooja &amp; Religious Activities Account</h4>
-        <p><span class="upi-label">Bank:</span> Union Bank of India</p>
-        <p><span class="upi-label">UPI ID:</span> <em>your-upi-id-3@bank</em></p>
-        <div class="upi-qr">
-          <img src="images/qr-pooja.png" alt="QR code for Pooja &amp; Religious Activities Account" />
-          <p style="font-size:0.8rem;margin-top:4px;">Replace with the actual QR code image for this account.</p>
-        </div>
-      </div>
-
-      <!-- UPI / QR for Account 4 -->
-      <div class="upi-card">
-        <h4>Events &amp; Cultural Fund</h4>
-        <p><span class="upi-label">Bank:</span> Bank of India</p>
-        <p><span class="upi-label">UPI ID:</span> <em>your-upi-id-4@bank</em></p>
-        <div class="upi-qr">
-          <img src="images/qr-events.png" alt="QR code for Events &amp; Cultural Fund" />
-          <p style="font-size:0.8rem;margin-top:4px;">Replace with the actual QR code image for this account.</p>
-        </div>
-      </div>
-
-      <!-- UPI / QR for Account 5 -->
-      <div class="upi-card">
-        <h4>Security &amp; Housekeeping</h4>
-        <p><span class="upi-label">Bank:</span> Canara Bank</p>
-        <p><span class="upi-label">UPI ID:</span> <em>your-upi-id-5@bank</em></p>
-        <div class="upi-qr">
-          <img src="images/qr-security.png" alt="QR code for Security &amp; Housekeeping" />
-          <p style="font-size:0.8rem;margin-top:4px;">Replace with the actual QR code image for this account.</p>
-        </div>
-      </div>
-
-      <!-- UPI / QR for Account 6 -->
-      <div class="upi-card">
-        <h4>Repairs &amp; Maintenance Reserve</h4>
-        <p><span class="upi-label">Bank:</span> Bank of Baroda</p>
-        <p><span class="upi-label">UPI ID:</span> <em>your-upi-id-6@bank</em></p>
-        <div class="upi-qr">
-          <img src="images/qr-repairs.png" alt="QR code for Repairs &amp; Maintenance Reserve" />
-          <p style="font-size:0.8rem;margin-top:4px;">Replace with the actual QR code image for this account.</p>
-        </div>
-      </div>
-
-      <!-- UPI / QR for Account 7 -->
-      <div class="upi-card">
-        <h4>Legal &amp; Compliance Fund</h4>
-        <p><span class="upi-label">Bank:</span> Indian Bank</p>
-        <p><span class="upi-label">UPI ID:</span> <em>your-upi-id-7@bank</em></p>
-        <div class="upi-qr">
-          <img src="images/qr-legal.png" alt="QR code for Legal &amp; Compliance Fund" />
-          <p style="font-size:0.8rem;margin-top:4px;">Replace with the actual QR code image for this account.</p>
-        </div>
-      </div>
-
-      <!-- UPI / QR for Account 8 -->
-      <div class="upi-card">
-        <h4>Development / Improvement Fund</h4>
-        <p><span class="upi-label">Bank:</span> Indian Overseas Bank</p>
-        <p><span class="upi-label">UPI ID:</span> <em>your-upi-id-8@bank</em></p>
-        <div class="upi-qr">
-          <img src="images/qr-development.png" alt="QR code for Development / Improvement Fund" />
-          <p style="font-size:0.8rem;margin-top:4px;">Replace with the actual QR code image for this account.</p>
-        </div>
-      </div>
-
-      <!-- UPI / QR for Account 9 -->
-      <div class="upi-card">
-        <h4>Parking &amp; Amenities Fund</h4>
-        <p><span class="upi-label">Bank:</span> IDBI Bank</p>
-        <p><span class="upi-label">UPI ID:</span> <em>your-upi-id-9@bank</em></p>
-        <div class="upi-qr">
-          <img src="images/qr-parking.png" alt="QR code for Parking &amp; Amenities Fund" />
-          <p style="font-size:0.8rem;margin-top:4px;">Replace with the actual QR code image for this account.</p>
-        </div>
-      </div>
-
-      <!-- UPI / QR for Account 10 -->
-      <div class="upi-card">
-        <h4>Emergency Fund Account</h4>
-        <p><span class="upi-label">Bank:</span> Central Bank of India</p>
-        <p><span class="upi-label">UPI ID:</span> <em>your-upi-id-10@bank</em></p>
-        <div class="upi-qr">
-          <img src="images/qr-emergency.png" alt="QR code for Emergency Fund Account" />
-          <p style="font-size:0.8rem;margin-top:4px;">Replace with the actual QR code image for this account.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  &copy; <span id="yearSpan"></span> CK Adiithya Layout Residents Association (CKALRA). All rights reserved.
-</footer>
-
-<script>
-  // Mobile menu toggle
-  const mobileBtn = document.getElementById('mobileBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  if (mobileBtn && mobileMenu) {
-    mobileBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  }
-
-  // Year in footer
-  const yearSpan = document.getElementById('yearSpan');
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
-  }
-</script>
-
+  <script>
+    // Simple script to auto-set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
