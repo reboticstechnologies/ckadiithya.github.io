@@ -67,6 +67,25 @@
     .pdf-list a {
       animation: glowPulse 2.5s infinite;
     }
+
+    /* ====== PAST MEETINGS EMBED HELPERS ====== */
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+      overflow: hidden;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 25px rgba(15,23,42,0.15);
+      background: #000;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
   </style>
 </head>
 
@@ -233,6 +252,120 @@
       Last updated: <strong>23 Nov 2025</strong>
     </div>
   </section>
+
+  <!-- ================= PAST MEETINGS SECTION (NEW) =================== -->
+  <section class="mt-10 bg-white rounded-3xl shadow p-6 md:p-8">
+    <h3 class="text-2xl md:text-3xl font-bold mb-2 flex items-center gap-2">
+      🎥 Past Meetings – Recordings & Documents
+    </h3>
+    <p class="text-sm text-slate-600 mb-6">
+      Residents can watch past meeting recordings and download the related minutes / presentations.
+    </p>
+
+    <div class="space-y-8">
+
+      <!-- Past Meeting 1 -->
+      <article class="border border-slate-200 rounded-2xl p-4 md:p-6">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Video -->
+          <div class="md:w-1/2">
+            <h4 class="text-lg font-semibold mb-2">General Body Meeting – 10 November 2025</h4>
+            <div class="video-wrapper">
+              <!-- Replace VIDEO_ID with your YouTube video id -->
+              <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID_1"
+                title="CKALRA Meeting Recording"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Details + PDF -->
+          <div class="md:w-1/2 flex flex-col justify-between gap-4">
+            <div>
+              <p class="text-sm text-slate-500 uppercase mb-1">Date & Time</p>
+              <p class="text-sm font-semibold mb-3">10 November 2025 • 7:00 PM</p>
+
+              <p class="text-sm text-slate-700 mb-3">
+                Key points: Security arrangements, monthly maintenance collection, and BESCOM meter update.
+              </p>
+
+              <div class="space-y-2">
+                <a href="past/2025-11-10-minutes.pdf" target="_blank"
+                   class="inline-flex items-center text-sm font-medium text-green-700 hover:underline">
+                  📄 View Minutes (PDF)
+                </a>
+                <br />
+                <a href="past/2025-11-10-presentation.pdf" target="_blank"
+                   class="inline-flex items-center text-sm font-medium text-green-700 hover:underline">
+                  📑 View Presentation / Agenda (PDF)
+                </a>
+              </div>
+            </div>
+
+            <!-- Optional embedded PDF preview (desktop only) -->
+            <div class="hidden md:block">
+              <p class="text-xs text-slate-500 mb-1">Preview Minutes (PDF)</p>
+              <iframe
+                src="past/2025-11-10-minutes.pdf#view=FitH"
+                class="w-full h-48 border border-slate-200 rounded-lg"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Past Meeting 2 (duplicate block for more meetings) -->
+      <article class="border border-slate-200 rounded-2xl p-4 md:p-6">
+        <div class="flex flex-col md:flex-row gap-6">
+          <div class="md:w-1/2">
+            <h4 class="text-lg font-semibold mb-2">Introductory Residents Meet – 01 October 2025</h4>
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID_2"
+                title="CKALRA Introductory Meeting Recording"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+          <div class="md:w-1/2 flex flex-col justify-between gap-4">
+            <div>
+              <p class="text-sm text-slate-500 uppercase mb-1">Date & Time</p>
+              <p class="text-sm font-semibold mb-3">01 October 2025 • 6:30 PM</p>
+
+              <p class="text-sm text-slate-700 mb-3">
+                Introduction to association objectives, membership drive, and layout issues collection from residents.
+              </p>
+
+              <div class="space-y-2">
+                <a href="past/2025-10-01-minutes.pdf" target="_blank"
+                   class="inline-flex items-center text-sm font-medium text-green-700 hover:underline">
+                  📄 View Minutes (PDF)
+                </a>
+              </div>
+            </div>
+
+            <div class="hidden md:block">
+              <p class="text-xs text-slate-500 mb-1">Preview Minutes (PDF)</p>
+              <iframe
+                src="past/2025-10-01-minutes.pdf#view=FitH"
+                class="w-full h-48 border border-slate-200 rounded-lg"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="mt-6 text-xs text-slate-500">
+      For any difficulty accessing videos or PDFs, please contact CKALRA Secretary.
+    </p>
+  </section>
+  <!-- =============== END PAST MEETINGS SECTION =============== -->
 
 </main>
 
